@@ -12,4 +12,4 @@ Run `!peb` on the command line at the bottom of command tab on WinDbg. PEB store
 - Loaded DLL information
 This is often used for malware analysis
 
-![alt text](peb.png)
+![alt text](Images/peb.png)
