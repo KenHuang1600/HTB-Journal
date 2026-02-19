@@ -15,6 +15,7 @@ After registration and login I was directed to `/home`
 ![alt text](assets/home.png)
 
 After some browsing I found out you can download vpn connection on Access tab using connection pack button. Additionally the download uses the endpoint: `/api/v1/user/vpn/generate`
+
 ![alt text](assets/access.png)
 
 I did some directory traversal through `/api` then `/api/v1`. As a result I saw 3 endpoints for admin. The `/api/v1/admin/settings/update` endpoint allows us to update user settings meaning we could possibly update created user account to admin.
