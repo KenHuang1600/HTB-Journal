@@ -36,6 +36,7 @@ Read into `.env` file in the directory which gave me the admin username and pasw
 Username and pasword can be used when connecting to machine IP using command `ssh 10.129.229.66 -l admin` and entering the pasword when prompted to. Opening file on first directory gives user flag.
 
 Next step is to look for mails sent to user to find information on the root. Mails are typically located in `/var/spool/mail/$USER`. I managed to find one mail file.
+
 ![alt text](assets/mail.png)
 
 Finally, I used git clone to download [Github](https://github.com/sxlmnwb/CVE-2023-0386) exploit to local machine and then transfered it to target machine using python servers. Next I compiled all required c files then executed them in mguided order. After script was executed I got root access level and was able to open `/root`. 
