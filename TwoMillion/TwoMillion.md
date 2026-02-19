@@ -20,6 +20,7 @@ After some browsing I found out you can download vpn connection on Access tab us
 I did some directory traversal through `/api` then `/api/v1`. As a result I saw 3 endpoints for admin. The `/api/v1/admin/settings/update` endpoint allows us to update user settings meaning we could possibly update created user account to admin.
 ![alt text](assets/api.png)
 
+## Creating Reverse Shell
 I was able to get the admin privilege working with this request:
 ![alt text](assets/request.png)
 
@@ -30,6 +31,7 @@ Using `pwd` our current directory is at `/var/www/html`
 Read into `.env` file in the directory which gave me the admin username and pasword
 ![alt text](assets/env.png)
 
+## Admin Connection and Root Access
 Username and pasword can be used when connecting to machine IP using command `ssh 10.129.229.66 -l admin` and entering the pasword when prompted to. Opening file on first directory gives user flag.
 
 Next step is to look for mails sent to user to find information on the root. Mails are typically located in `/var/spool/mail/$USER`. I managed to find one mail file.
